@@ -16,7 +16,7 @@ use App\Http\Controllers\GerarRelatorioController;
 |
 */
 
-Route::get('/', [CandidatoController::class, 'index']);
-Route::get('/registrarVotoView', [CandidatoController::class, 'index']);
+Route::get('/', [CandidatoController::class, 'initial']);
+Route::get('/registrarVotoView', [GerarRelatorioController::class, 'showAll']);
 Route::get('/relatorio', [GerarRelatorioController::class, 'showAll']);
 Route::get('/relatorio{id}',[RegistrarVotoController::class, 'votar'])->name('registrarVoto');

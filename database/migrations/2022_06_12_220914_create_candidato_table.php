@@ -18,7 +18,7 @@ class CreateCandidatoTable extends Migration
             $table->string('nome', 100);
             $table->string('numero_chapa', 2);
             $table->string('partido', 100);
-            $table->enum('situacao_candidato',['deferido', 'indefirido'])->default('deferido');
+            $table->enum('situacao_candidato',['deferido', 'indeferido'])->default('deferido');
             $table->integer('qtd_voto')->default(0);
             $table->timestamps();
         });
