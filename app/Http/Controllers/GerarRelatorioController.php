@@ -11,3 +11,4 @@ class GerarRelatorioController extends Controller
         return view('/gerarRelatorioView', ['candidato'=> $candidato]);
     }
 }
+

@@ -20,6 +20,7 @@
                             <div class="card-content">
                                 <h5 class="card-title">{{$candidato->nome}}</h5>
                                 <p class="card-text">{{$candidato->numero_chapa}}</p>
+                                <p class="card-text">Partido: {{$candidato->partido}}</p>
                             </div>      
                             <div class="card-button">
                                 <a href="{{ route('registrarVoto', ['id'=>$candidato->id]) }}" class="btn btn-primary">Votar</a>
@@ -33,12 +34,12 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
     <style>
         .container {
+            min-height:100vh;
             justify-content: space-around;
             align-items: center;
             display: flex;
             flex-wrap: wrap;
             background-color: blue;
-            
         }
         .card {
             width: 350px;
@@ -51,7 +52,6 @@
         }
         .card-body {
             flex: 1 1 120px;
-            background-color: yellow;
             justify-content: space-between;
             border-radius: 3px;
             height: 100%;
@@ -59,10 +59,6 @@
         .card-content{
             flex-direction: column;
             justify-content: space-between;
-        }
-        .card-button{
-            background-color: pink;
-            justify-content: flex-end;
         }
     </style>
 </body>

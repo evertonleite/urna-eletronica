@@ -8,10 +8,14 @@ class RegistrarVotoController extends Controller
 {
     public function votar($id) {
         $candidato = Candidato::find($id);
-        $candidato->qtd_voto += 1;
-        $candidato->save();
+        if ($candidato->situacao($id)){
+            $candidato->qtd_voto += 1;
+            $candidato->save();
 
-        return redirect('/relatorio');
+            return redirect('/relatorio');
+        }else{
+            return redirect('/relatorio');
+        }
     }
 
 }

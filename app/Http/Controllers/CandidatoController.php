@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 class CandidatoController extends Controller
 {
-    public function index() {
+    public function initial() {
         $candidato = Candidato::all();
         return view('/registrarVotoView', ['candidato'=> $candidato]);
     }
